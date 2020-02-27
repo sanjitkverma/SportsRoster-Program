@@ -30,23 +30,26 @@ import java.util.Scanner;
  */
 public class RosterGenerator {
     public static void main(String[] args) {
+        //declare variables and arrays
         int numbers=5;
         int[] jerseys = new int[numbers];
         int[] rankings = new int[numbers];
         Scanner input = new Scanner(System.in);
         boolean close = false;
 
+        //get user input for roster and tests for errors
         try {
+            //get jersey number
             for (int i = 0; i < numbers; i++) {
                 System.out.print("Enter player " + (i + 1) + "'s jersey number (0-99): ");
                 int jersey = input.nextInt();
                 jerseys[i] = jersey;
                 if (jersey >= 100){
-                   System.out.println("Error enter jersey number 0-99... try again");
+                   System.out.println("Error enter jersey number 0-99... try again");//exit if variable greater than 99
                    System.exit(1);
 
                 }
-
+                // get rank
                 System.out.print("Enter player " + (i + 1) + "'s ranking(1[Low]- 9[high]): ");
                 int ranking = input.nextInt();
                 rankings[i] = ranking;
@@ -56,6 +59,8 @@ public class RosterGenerator {
                     System.exit(1);
                 }
             }
+
+            //Test for similar jersey numbers
             if (jerseys[1] == jerseys[2]) {
                 System.out.println("Error Jersey#1 same number as Jersey#2 ");
             }
@@ -120,8 +125,8 @@ public class RosterGenerator {
             if (jerseys[0] == jerseys[4]) {
                 System.out.println("Error Jersey#5 same number as Jersey#4");
             }
-
                 String menu = input.nextLine();
+                //Create menu and items
                 while (!close) {
 
                     System.out.println(" ");
@@ -134,9 +139,9 @@ public class RosterGenerator {
                     System.out.println("");
                     System.out.print("Choose an option: ");
                     menu = input.nextLine();
-                        if (menu.contains("q")) {
+                        if (menu.contains("q")) {//close if user types q
                             close = true;
-                        } else if (menu.contains("o")) {
+                        } else if (menu.contains("o")) {//Output the arrays if user types o
                             System.out.println("CURRENT ROSTER");
                             int i = 0;
 
@@ -145,7 +150,7 @@ public class RosterGenerator {
                                 System.out.println("...");
                                 i++;
                             }
-                        } else if (menu.contains("u")) {
+                        } else if (menu.contains("u")) {//update player ranking if user types u
                             System.out.print("Enter a jersey number: ");
                             int jersey = input.nextInt();
                             int i;
@@ -163,7 +168,7 @@ public class RosterGenerator {
                                 System.exit(1);
                             }
 
-                        } else if (menu.contains("a")) {
+                        } else if (menu.contains("a")) {//Display the ranks/players above if user types a
                             System.out.print("Enter Ranking: ");
                             int rank = input.nextInt();
                             System.out.println("ABOVE " + rank);
@@ -174,7 +179,7 @@ public class RosterGenerator {
                             }
                             System.out.println();
                             menu = input.nextLine();
-                        } else if (menu.contains("r")) {
+                        } else if (menu.contains("r")) {//If user types r replace the jersey and rank with new user input
                             System.out.print("Enter a Jersey Number: ");
                             Scanner scan = new Scanner(System.in);
                             int jerseyNumber = scan.nextInt();
@@ -200,7 +205,7 @@ public class RosterGenerator {
                         }
                     }
         }
-        catch (Exception e) {
+        catch (Exception e) { //If error occurs in user input types:
             System.out.println("Invalid Parameter try again");
         }
     }

@@ -1,4 +1,10 @@
 package com.company;
+/*
+ *Comp 167 MajorProject 1 Spring 2020
+ * The player class creates get and set methods to retrieve values from the rostergenerator class
+ * Author @Sanjit Verma
+ * @Since 2/25/2020
+ */
 public class player {
     public int playerJerseyNumber;
     public int playerRanking;

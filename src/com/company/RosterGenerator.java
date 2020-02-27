@@ -14,7 +14,7 @@ public class RosterGenerator {
                 int jersey = input.nextInt();
                 jerseys[i] = jersey;
 
-                System.out.print("Enter player " + (i + 1) + "'s ranking(1-9): ");
+                System.out.print("Enter player " + (i + 1) + "'s ranking(1[Low]- 9[high]): ");
                 int ranking = input.nextInt();
                 rankings[i] = ranking;
                 System.out.println();
@@ -94,7 +94,7 @@ public class RosterGenerator {
                 System.out.println("o - Output roster");
                 System.out.println("q - Quit");
                 System.out.println("");
-                System.out.println("Choose an option: ");
+                System.out.print("Choose an option: ");
                 menu = input.nextLine();
 
                 if (menu.contains("q")) {
@@ -102,28 +102,42 @@ public class RosterGenerator {
                 } else if (menu.contains("o")) {
                     System.out.println("CURRENT ROSTER");
                     int i = 0;
+
                     while (i < numbers) {
-                        System.out.println("Player " + (i + 1) + " -- Jersey number: " + jerseys[i] + ", Rating: " + rankings[i]);
+                        System.out.println("Player " + (i + 1) + " -- Jersey number: " + jerseys[i] + ", Ranking: " + rankings[i]);
                         System.out.println("...");
                         i++;
-                        }
                     }
-                    else if (menu.contains("u")) {
-                        System.out.print("Enter a jersey number: ");
-                        int jersey = input.nextInt();
-                        int i;
+                }
+                else if (menu.contains("u")) {
+                    System.out.print("Enter a jersey number: ");
+                    int jersey = input.nextInt();
+                    int i;
                     for (i = 0; i < numbers; i++) {
-                            if (jerseys[i] == jersey) {
-                                break;
-                            }
+                        if (jerseys[i] == jersey) {
+                            break;
                         }
-                        System.out.print("Enter new rating: ");
-                        int rating = input.nextInt();
-                        rankings[i] = rating;
-                        menu = input.nextLine();
                     }
+                    System.out.print("Enter new ranking: ");
+                    int rank = input.nextInt();
+                    rankings[i] = rank;
+                    menu = input.nextLine();
+                }
+                else if (menu.contains("a")) {
+                    System.out.print("Enter Ranking: ");
+                    int rank = input.nextInt();
+                    System.out.println("ABOVE " + rank);
+                    for (int i = 0; i < numbers; i++) {
+                        if (rankings[i] > rank) {
+                            System.out.println("Player " + (i + 1) + " -- Jersey number: " + jerseys[i] + ", Ranking: " + rankings[i]);
+                        }
+                    }
+                    System.out.println();
+                    menu = input.nextLine();
+                }
             }
-        } catch (Exception e) {
+        }
+        catch (Exception e) {
             System.out.println("Invalid Parameter try again");
         }
     }

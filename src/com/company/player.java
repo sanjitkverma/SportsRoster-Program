@@ -5,28 +5,26 @@ package com.company;
  * Author @Sanjit Verma
  * @Since 2/25/2020
  */
-public class player {
-    public int playerJerseyNumber;
-    public int playerRanking;
-
-public player(int playerJerseyNumber, int playerRanking) {
-    this.playerJerseyNumber = playerJerseyNumber;
-    this.playerRanking = playerRanking;
-}
-        public int getplayerJerseyNumber() {
-            return playerJerseyNumber;
-        }
-        public void setplayerJerseyNumber (int playerJerseyNumber){
-            this.playerJerseyNumber = playerJerseyNumber;
-        }
-        public int playerRanking () {
-            return playerRanking;
-        }
-        public void setplayerRanking (int playerRanking) {
-                this.playerRanking = playerRanking;
-        }
-        public String toString () {
-            return "Jersey Number"+ playerJerseyNumber + "Player Ranking" + playerRanking;
-        }
+import java.util.*;
+class Player{
+    private int jerseyNumber;
+    private int rating;
+    public Player(int jerseyNumber, int rating) {
     }
+    public int getJerseyNumber() {
+        return jerseyNumber;
+    }
+    public void setJerseyNumber(int jerseyNumber) {
+        this.jerseyNumber = jerseyNumber;
+    }
+    public int getRating() {
+        return rating;
+    }
+    public void setRating(int rating) {
+        this.rating = rating;
+    }
+    public String toString() {
+        return "Player jersey : "+this.jerseyNumber+"Player rating : "+this.rating;
+    }
+}
 

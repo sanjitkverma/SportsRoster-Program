@@ -38,116 +38,115 @@ public class RosterGenerator {
         boolean close = false;
 
         //get user input for roster and tests for errors
-        try {
-            //get jersey number
-            for (int i = 0; i < numbers; i++) {
-                System.out.print("Enter player " + (i + 1) + "'s jersey number (0-99): ");
-                int jersey = input.nextInt();
-                jerseys[i] = jersey;
-                if (jersey >= 100){
-                   System.out.println("Error enter jersey number 0-99... try again");//exit if variable greater than 99
-                   System.exit(1);
+            try {
+                //get jersey number
+                for (int i = 0; i < numbers; i++) {
+                    System.out.print("Enter player " + (i + 1) + "'s jersey number (0-99): ");
+                    int jersey = input.nextInt();
+                    jerseys[i] = jersey;
+                    if (jersey >= 100) {
+                        System.out.println("Error enter jersey number 0-99... try again");//exit if variable greater than 99
+                        System.exit(1);
 
+                    }
+                    // get rank
+                    System.out.print("Enter player " + (i + 1) + "'s ranking(1[Low]- 9[high]): ");
+                    int ranking = input.nextInt();
+                    rankings[i] = ranking;
+                    System.out.println(" ");
+                    if (ranking >= 10) {
+                        System.out.println("Error enter rank 1-9... try again");
+                        System.exit(1);
+                    }
                 }
-                // get rank
-                System.out.print("Enter player " + (i + 1) + "'s ranking(1[Low]- 9[high]): ");
-                int ranking = input.nextInt();
-                rankings[i] = ranking;
-                System.out.println(" ");
-                if (ranking >= 10){
-                    System.out.println("Error enter rank 1-9... try again");
+
+                //Test for similar jersey numbers, exits code if two jerseys are same
+                if (jerseys[0] == jerseys[1]) {
+                    System.out.println("Error Jersey#1 same number as Jersey#2 ");
                     System.exit(1);
                 }
-            }
+                if (jerseys[0] == jerseys[2]) {
+                    System.out.println("Error Jersey#1 same number as Jersey#3");
+                    System.exit(1);
+                }
+                if (jerseys[0] == jerseys[3]) {
+                    System.out.println("Error Jersey#1 same number as Jersey#4");
+                    System.exit(1);
+                }
+                if (jerseys[0] == jerseys[4]) {
+                    System.out.println("Error Jersey#1 same number as Jersey#5");
+                    System.exit(1);
+                }
 
-            //Test for similar jersey numbers, exits code if two jerseys are same
-            if (jerseys[0] == jerseys[1]) {
-                System.out.println("Error Jersey#1 same number as Jersey#2 ");
-                System.exit(1);
-            }
-            if (jerseys[0] == jerseys[2]) {
-                System.out.println("Error Jersey#1 same number as Jersey#3");
-                System.exit(1);
-            }
-            if (jerseys[0] == jerseys[3]) {
-                System.out.println("Error Jersey#1 same number as Jersey#4");
-                System.exit(1);
-            }
-            if (jerseys[0] == jerseys[4]) {
-                System.out.println("Error Jersey#1 same number as Jersey#5");
-                System.exit(1);
-            }
+                if (jerseys[1] == jerseys[0]) {
+                    System.out.println("Error Jersey#2 same number as Jersey#1 ");
+                    System.exit(1);
+                }
+                if (jerseys[1] == jerseys[2]) {
+                    System.out.println("Error Jersey#2 same number as Jersey#3");
+                    System.exit(1);
+                }
+                if (jerseys[1] == jerseys[3]) {
+                    System.out.println("Error Jersey#2 same number as Jersey#4");
+                    System.exit(1);
+                }
+                if (jerseys[1] == jerseys[4]) {
+                    System.out.println("Error Jersey#2 same number as Jersey#5");
+                    System.exit(1);
+                }
 
-            if (jerseys[1] == jerseys[0]) {
-                System.out.println("Error Jersey#2 same number as Jersey#1 ");
-                System.exit(1);
-            }
-            if (jerseys[1] == jerseys[2]) {
-                System.out.println("Error Jersey#2 same number as Jersey#3");
-                System.exit(1);
-            }
-            if (jerseys[1] == jerseys[3]) {
-                System.out.println("Error Jersey#2 same number as Jersey#4");
-                System.exit(1);
-            }
-            if (jerseys[1] == jerseys[4]) {
-                System.out.println("Error Jersey#2 same number as Jersey#5");
-                System.exit(1);
-            }
+                if (jerseys[2] == jerseys[0]) {
+                    System.out.println("Error Jersey#3 same number as Jersey#1 ");
+                    System.exit(1);
+                }
+                if (jerseys[2] == jerseys[1]) {
+                    System.out.println("Error Jersey#3 same number as Jersey#2");
+                    System.exit(1);
+                }
+                if (jerseys[2] == jerseys[3]) {
+                    System.out.println("Error Jersey#3 same number as Jersey#4");
+                    System.exit(1);
+                }
+                if (jerseys[2] == jerseys[4]) {
+                    System.out.println("Error Jersey#3 same number as Jersey#5");
+                    System.exit(1);
+                }
 
-            if (jerseys[2] == jerseys[0]) {
-                System.out.println("Error Jersey#3 same number as Jersey#1 ");
-                System.exit(1);
-            }
-            if (jerseys[2] == jerseys[1]) {
-                System.out.println("Error Jersey#3 same number as Jersey#2");
-                System.exit(1);
-            }
-            if (jerseys[2] == jerseys[3]) {
-                System.out.println("Error Jersey#3 same number as Jersey#4");
-                System.exit(1);
-            }
-            if (jerseys[2] == jerseys[4]) {
-                System.out.println("Error Jersey#3 same number as Jersey#5");
-                System.exit(1);
-            }
+                if (jerseys[3] == jerseys[0]) {
+                    System.out.println("Error Jersey#4 same number as Jersey#1 ");
+                    System.exit(1);
+                }
+                if (jerseys[3] == jerseys[1]) {
+                    System.out.println("Error Jersey#4 same number as Jersey#2");
+                    System.exit(1);
+                }
+                if (jerseys[3] == jerseys[2]) {
+                    System.out.println("Error Jersey#4 same number as Jersey#3");
+                    System.exit(1);
+                }
+                if (jerseys[3] == jerseys[4]) {
+                    System.out.println("Error Jersey#4 same number as Jersey#5");
+                    System.exit(1);
+                }
 
-            if (jerseys[3] == jerseys[0]) {
-                System.out.println("Error Jersey#4 same number as Jersey#1 ");
-                System.exit(1);
-            }
-            if (jerseys[3] == jerseys[1]) {
-                System.out.println("Error Jersey#4 same number as Jersey#2");
-                System.exit(1);
-            }
-            if (jerseys[3] == jerseys[2]) {
-                System.out.println("Error Jersey#4 same number as Jersey#3");
-                System.exit(1);
-            }
-            if (jerseys[3] == jerseys[4]) {
-                System.out.println("Error Jersey#4 same number as Jersey#5");
-                System.exit(1);
-            }
+                if (jerseys[4] == jerseys[0]) {
+                    System.out.println("Error Jersey#5 same number as Jersey#1 ");
+                    System.exit(1);
+                }
+                if (jerseys[4] == jerseys[1]) {
+                    System.out.println("Error Jersey#5 same number as Jersey#2");
+                    System.exit(1);
+                }
+                if (jerseys[4] == jerseys[2]) {
+                    System.out.println("Error Jersey#5 same number as Jersey#3");
+                }
+                if (jerseys[4] == jerseys[3]) {
+                    System.out.println("Error Jersey#5 same number as Jersey#4");
+                }
 
-            if (jerseys[4] == jerseys[0]) {
-                System.out.println("Error Jersey#5 same number as Jersey#1 ");
-                System.exit(1);
-            }
-            if (jerseys[4] == jerseys[1]) {
-                System.out.println("Error Jersey#5 same number as Jersey#2");
-                System.exit(1);
-            }
-            if (jerseys[4] == jerseys[2]) {
-                System.out.println("Error Jersey#5 same number as Jersey#3");
-            }
-            if (jerseys[4] == jerseys[3]) {
-                System.out.println("Error Jersey#5 same number as Jersey#4");
-            }
-
-            String menu = input.nextLine();
+                String menu = input.nextLine();
                 //Create menu and items
                 while (!close) {
-
                     System.out.println(" ");
                     System.out.println("MENU");
                     System.out.println("u - Update player ranking");
@@ -157,78 +156,78 @@ public class RosterGenerator {
                     System.out.println("q - Quit");
                     System.out.println("");
                     System.out.print("Choose an option: ");
+
                     menu = input.nextLine();
-                        if (menu.contains("q")) {//close if user types q
-                            close = true;
-                        } else if (menu.contains("o")) {//Output the arrays if user types o
-                            System.out.println("CURRENT ROSTER");
-                            int i = 0;
+                    if (menu.contains("q")) {//close if user types q
+                        close = true;
+                    } else if (menu.contains("o")) {//Output the arrays if user types o
+                        System.out.println("CURRENT ROSTER");
+                        int i = 0;
 
-                            while (i < numbers) {
+                        while (i < numbers) {
+                            System.out.println("Player " + (i + 1) + " -- Jersey number: " + jerseys[i] + ", Ranking: " + rankings[i]);
+                            System.out.println("...");
+                            i++;
+                        }
+                    } else if (menu.contains("u")) {//update player ranking if user types u
+                        System.out.print("Enter a jersey number: ");
+                        int jersey = input.nextInt();
+                        int i;
+                        for (i = 0; i < numbers; i++) {
+                            if (jerseys[i] == jersey) {
+                                break;
+                            }
+                        }
+                        System.out.print("Enter new ranking: ");
+                        int rank = input.nextInt();
+                        rankings[i] = rank;
+                        menu = input.nextLine();
+                        if (rank >= 10) {
+                            System.out.println("Error enter rank 1-9... try again");
+                            System.exit(1);
+                        }
+
+                    } else if (menu.contains("a")) {//Display the ranks/players above if user types a
+                        System.out.print("Enter Ranking: ");
+                        int rank = input.nextInt();
+                        System.out.println("ABOVE " + rank);
+                        for (int i = 0; i < numbers; i++) {
+                            if (rankings[i] > rank) {
                                 System.out.println("Player " + (i + 1) + " -- Jersey number: " + jerseys[i] + ", Ranking: " + rankings[i]);
-                                System.out.println("...");
-                                i++;
                             }
-                        } else if (menu.contains("u")) {//update player ranking if user types u
-                            System.out.print("Enter a jersey number: ");
-                            int jersey = input.nextInt();
-                            int i;
-                            for (i = 0; i < numbers; i++) {
-                                if (jerseys[i] == jersey) {
-                                    break;
-                                }
-                            }
-                            System.out.print("Enter new ranking: ");
-                            int rank = input.nextInt();
-                            rankings[i] = rank;
-                            menu = input.nextLine();
-                            if (rank >= 10) {
-                                System.out.println("Error enter rank 1-9... try again");
-                                System.exit(1);
-                            }
+                        }
+                        System.out.println();
+                        menu = input.nextLine();
+                    } else if (menu.contains("r")) {//If user types r replace the jersey and rank with new user input
+                        System.out.print("Enter a Jersey Number: ");
+                        Scanner scan = new Scanner(System.in);
+                        int jerseyNumber = scan.nextInt();
 
-                        } else if (menu.contains("a")) {//Display the ranks/players above if user types a
-                            System.out.print("Enter Ranking: ");
-                            int rank = input.nextInt();
-                            System.out.println("ABOVE " + rank);
-                            for (int i = 0; i < numbers; i++) {
-                                if (rankings[i] > rank) {
-                                    System.out.println("Player " + (i + 1) + " -- Jersey number: " + jerseys[i] + ", Ranking: " + rankings[i]);
+                        for (int i = 0; i < 5; i++) {
+                            if (jerseys[i] == jerseyNumber) {
+                                System.out.print("Enter Player new jersey Number: ");
+                                int numb = scan.nextInt();
+                                if (numb >= 100) {
+                                    System.out.println("Error enter jersey number 0-99... try again");
+                                    System.exit(1);
                                 }
-                            }
-                            System.out.println();
-                            menu = input.nextLine();
-                        } else if (menu.contains("r")) {//If user types r replace the jersey and rank with new user input
-                            System.out.print("Enter a Jersey Number: ");
-                            Scanner scan = new Scanner(System.in);
-                            int jerseyNumber = scan.nextInt();
-
-                            for (int i = 0; i < 5; i++) {
-                                if (jerseys[i] == jerseyNumber) {
-                                    System.out.print("Enter Player new jersey Number: ");
-                                    int numb = scan.nextInt();
-                                    if (numb >= 100) {
-                                        System.out.println("Error enter jersey number 0-99... try again");
-                                        System.exit(1);
-                                    }
-                                    System.out.print("Enter Player new ranking Number: ");
-                                    int rank = scan.nextInt();
-                                    jerseys[i] = numb;
-                                    rankings[i] = rank;
-                                    if (rank >= 10) {
-                                        System.out.println("Error enter rank 1-9... try again");
-                                        System.exit(1);
-                                    }
+                                System.out.print("Enter Player new ranking Number: ");
+                                int rank = scan.nextInt();
+                                jerseys[i] = numb;
+                                rankings[i] = rank;
+                                if (rank >= 10) {
+                                    System.out.println("Error enter rank 1-9... try again");
+                                    System.exit(1);
                                 }
                             }
                         }
                     }
-        }
-        catch (Exception e) { //If error occurs in user input types:
-            System.out.println("Invalid Parameter try again");
+                }
+            } catch (Exception e) { //If error occurs in user input types:
+                System.out.println("Invalid Parameter try again");
+            }
         }
     }
-}
 
 
 

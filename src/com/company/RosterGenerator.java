@@ -60,7 +60,7 @@ public class RosterGenerator {
                 }
             }
 
-            //Test for similar jersey numbers
+            //Test for similar jersey numbers, exits code if two jerseys are same
             if (jerseys[0] == jerseys[1]) {
                 System.out.println("Error Jersey#1 same number as Jersey#2 ");
                 System.exit(1);

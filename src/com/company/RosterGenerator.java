@@ -65,86 +65,86 @@ menu for the next methods and redirects the other methods to do something if int
                     count--;
                 } else {
                     if (jerseyNumber[0] == jerseyNumber[1]) {
-                        System.out.println("Error Jersey#1 same number as Jersey#2 ");
+                        System.out.println("Error Jersey Number matches twice ");
                         System.exit(1);
                     }
                     if (jerseyNumber[0] == jerseyNumber[2]) {
-                        System.out.println("Error Jersey#1 same number as Jersey#3");
+                        System.out.println("Error Jersey Number matches twice ");
                         System.exit(1);
                     }
                     if (jerseyNumber[0] == jerseyNumber[3]) {
-                        System.out.println("Error Jersey#1 same number as Jersey#4");
+                        System.out.println("Error Jersey Number matches twice ");
                         System.exit(1);
                     }
                     if (jerseyNumber[0] == jerseyNumber[4]) {
-                        System.out.println("Error Jersey#1 same number as Jersey#5");
+                        System.out.println("Error Jersey Number matches twice ");
                         System.exit(1);
                     }
 
                     if (jerseyNumber[1] == jerseyNumber[0]) {
-                        System.out.println("Error Jersey#2 same number as Jersey#1 ");
+                        System.out.println("Error Jersey Number matches twice ");
                         System.exit(1);
                     }
                     if (jerseyNumber[1] == jerseyNumber[2]) {
-                        System.out.println("Error Jersey#2 same number as Jersey#3");
+                        System.out.println("Error Jersey Number matches twice ");
                         System.exit(1);
                     }
                     if (jerseyNumber[1] == jerseyNumber[3]) {
-                        System.out.println("Error Jersey#2 same number as Jersey#4");
+                        System.out.println("Error Jersey Number matches twice ");
                         System.exit(1);
                     }
                     if (jerseyNumber[1] == jerseyNumber[4]) {
-                        System.out.println("Error Jersey#2 same number as Jersey#5");
+                        System.out.println("Error Jersey Number matches twice ");
                         System.exit(1);
                     }
 
                     if (jerseyNumber[2] == jerseyNumber[0]) {
-                        System.out.println("Error Jersey#3 same number as Jersey#1 ");
+                        System.out.println("Error Jersey Number matches twice ");
                         System.exit(1);
                     }
                     if (jerseyNumber[2] == jerseyNumber[1]) {
-                        System.out.println("Error Jersey#3 same number as Jersey#2");
+                        System.out.println("Error Jersey Number matches twice ");
                         System.exit(1);
                     }
                     if (jerseyNumber[2] == jerseyNumber[3]) {
-                        System.out.println("Error Jersey#3 same number as Jersey#4");
+                        System.out.println("Error Jersey Number matches twice ");
                         System.exit(1);
                     }
                     if (jerseyNumber[2] == jerseyNumber[4]) {
-                        System.out.println("Error Jersey#3 same number as Jersey#5");
+                        System.out.println("Error Jersey Number matches twice ");
                         System.exit(1);
                     }
 
                     if (jerseyNumber[3] == jerseyNumber[0]) {
-                        System.out.println("Error Jersey#4 same number as Jersey#1 ");
+                        System.out.println("Error Jersey Number matches twice ");
                         System.exit(1);
                     }
                     if (jerseyNumber[3] == jerseyNumber[1]) {
-                        System.out.println("Error Jersey#4 same number as Jersey#2");
+                        System.out.println("Error Jersey Number matches twice ");
                         System.exit(1);
                     }
                     if (jerseyNumber[3] == jerseyNumber[2]) {
-                        System.out.println("Error Jersey#4 same number as Jersey#3");
+                        System.out.println("Error Jersey Number matches twice ");
                         System.exit(1);
                     }
                     if (jerseyNumber[3] == jerseyNumber[4]) {
-                        System.out.println("Error Jersey#4 same number as Jersey#5");
+                        System.out.println("Error Jersey Number matches twice ");
                         System.exit(1);
                     }
 
                     if (jerseyNumber[4] == jerseyNumber[0]) {
-                        System.out.println("Error Jersey#5 same number as Jersey#1 ");
+                        System.out.println("Error Jersey Number matches twice ");
                         System.exit(1);
                     }
                     if (jerseyNumber[4] == jerseyNumber[1]) {
-                        System.out.println("Error Jersey#5 same number as Jersey#2");
+                        System.out.println("Error Jersey Number matches twice ");
                         System.exit(1);
                     }
                     if (jerseyNumber[4] == jerseyNumber[2]) {
-                        System.out.println("Error Jersey#5 same number as Jersey#3");
+                        System.out.println("Error Jersey Number matches twice ");
                     }
                     if (jerseyNumber[4] == jerseyNumber[3]) {
-                        System.out.println("Error Jersey#5 same number as Jersey#4");
+                        System.out.println("Error Jersey Number matches twice ");
                     }
                 }
             }

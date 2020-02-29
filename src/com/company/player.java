@@ -8,8 +8,10 @@ package com.company;
 import java.util.*;
 class Player{
     private int jerseyNumber;
-    private int rating;
-    public Player(int jerseyNumber, int rating) {
+    private int ranking;
+    public Player(int n, int rn) {
+        this.jerseyNumber=n;
+        this.ranking=rn;
     }
     public int getJerseyNumber() {
         return jerseyNumber;
@@ -17,14 +19,16 @@ class Player{
     public void setJerseyNumber(int jerseyNumber) {
         this.jerseyNumber = jerseyNumber;
     }
-    public int getRating() {
-        return rating;
+    public int getRanking() {
+        return ranking;
     }
-    public void setRating(int rating) {
-        this.rating = rating;
+    public void setRanking(int Ranking) {
+        this.ranking = Ranking;
     }
     public String toString() {
-        return "Player jersey : "+this.jerseyNumber+"Player rating : "+this.rating;
+        return "Jersey number: "+this.jerseyNumber+ "," + " Ranking: " + this.ranking;
     }
 }
+
+
 
